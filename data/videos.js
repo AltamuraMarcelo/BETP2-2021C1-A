@@ -37,7 +37,7 @@ function getTotalTime(list){
 
 function getDurationOf(name){
   let filtrados = strList.filter(item => item.match(name)).map(duracion => {
-    const p = duracion.split(':').map(e => parseFloat(e));
+    let p = duracion.split(':').map(e => parseFloat(e));
     return (p[0] * 60) + p[1]
   })
   return getTotalTime(filtrados);
